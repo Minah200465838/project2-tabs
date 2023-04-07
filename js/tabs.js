@@ -22,80 +22,40 @@ for(let i=0;i<tabsDivs.length;i++){
 }
 
 
-// dark mode button
-$(document).ready(function() {
-  // button click event
-  $('#darkButton').click(function() {
-    $('body').toggleClass('dark-mode');
-    $('#darkButton').html('Day mode');
-  }).unclick(function(){$(this).html("Dark mode");
-});
-});
-  // the dark mode button text
-  $('.test').mouseover(function(){
-    $(this).html('change background');
-  }).mouseout(function(){
-    $(this).html("hover here!");
-  });
-
-
-// button 2 - moon
-// $(document).ready(function(){
-//   $('#move').on('click', function(){
-//     //목표로 하는 css의 속성을 지정하면 자동으로 그 사이를 만들어 주는 
-//     $('.moon').animate({left:'200px'});
-//   });
-//   $('#moveBack').on('click', function(){
-           
-//     $('.moon').animate( {left:''}, 3000 ); //duration
-// });
-// $('#multiAni').on('click', function(){
-
-//     $('.moon').animate( {left:'+=50px', opacity:'0.4', width:'+=50px', height:'-=50px'}, 3000 ); //duration
-// });
-// $('#sequential').on('click', function(){
-//     $('.moon').animate( {left:'+=30px'}, 1000 ); 
-//     $('.moon').animate( {opacity:'0.4'}, 1000 ); 
-//     $('.moon').animate( {width:'+=50px'}, 1000 ); 
-//     $('.moon').animate( {height:'-=50px'}, 1000 ); 
-// });
-// //리셋
-// $('#reset').on('click', function(){
-//    $('.moon').animate( {left:'', opacity:'1.0', width:'200px', height:'200px'}, 3000 );
-// });
-
-// $('#stop').on('click', function(){
-//     $('.moon').stop();
-// });
-
-// });
-
-// button 2 - pencil
+// button - pencil
 $(document).ready(function(){
+  // if #move is clicked
   $('#move').on('click', function(){
-    //목표로 하는 css의 속성을 지정하면 자동으로 그 사이를 만들어 주는 
+    // grab .pencil(class name is pencil in html file) 
+    // and set animate event to left 400px 
     $('.pencil').animate({left:'400px'});
   });
+
   $('#moveBack').on('click', function(){
-           
     $('.pencil').animate( {left:''}, 3000 ); //duration
 });
-$('#multiAni').on('click', function(){
 
+$('#fadedV1').on('click', function(){
+    // set animate event to left, opacity, and size of picture
     $('.pencil').animate( {left:'+=50px', opacity:'0.4', width:'+=50px', height:'-=50px'}, 3000 ); //duration
 });
-$('#sequential').on('click', function(){
+
+$('#fadedV2').on('click', function(){
+  // set more diverse animate events
     $('.pencil').animate( {left:'+=30px'}, 1000 ); 
     $('.pencil').animate( {opacity:'0.4'}, 1000 ); 
-    $('.mopenciln').animate( {width:'+=50px'}, 1000 ); 
+    $('.pencil').animate( {width:'+=50px'}, 1000 ); 
     $('.pencil').animate( {height:'-=50px'}, 1000 ); 
 });
-//리셋
+
+// reset button 
 $('#reset').on('click', function(){
-   $('.pencil').animate( {left:'', opacity:'1.0', width:'200px', height:'200px'}, 3000 );
+  //make pencil to be the original positon
+   $('.pencil').animate( {left:'', opacity:'1.0', width:'50px', height:'35px'}, 3000 );
 });
 
 $('#stop').on('click', function(){
+  // set stop event to let the pencil can stop itself when stop button is clicked
     $('.pencil').stop();
 });
 
